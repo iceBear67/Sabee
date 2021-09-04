@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'io.ib67'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    compileOnly 'org.jetbrains:annotations:22.0.0'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    compileOnly 'com.google.auto.service:auto-service-annotations:1.0'
+    implementation group: 'net.jodah', name: 'typetools', version: '0.6.3'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+test {
+    useJUnitPlatform()
+}
